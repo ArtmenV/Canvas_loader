@@ -22,10 +22,10 @@ function draw() {
     x++;
 
     ctx.beginPath();
-    ctx.font = 'bold 55px Arial';
-    ctx.fillStyle = color;
-    ctx.textAlign = 'center';
-    ctx.fillText(x+'%', 125, 145);
+        ctx.font = 'bold 55px Arial';
+        ctx.fillStyle = color;
+        ctx.textAlign = 'center';
+        ctx.fillText(x+'%', 125, 145);
     ctx.closePath();
 
 

@@ -1,6 +1,7 @@
 #canvas {
-    width: 250px;
-    height: 250px;
-    margin: 100px;
+    width: 600px;
+    height: 600px;
+    margin: 50px auto;
     border: 1px solid orange;
+    display: block;
 }
