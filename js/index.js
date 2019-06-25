@@ -12,9 +12,15 @@ window.onload = function() {
         clicks.push(xy);
         console.log(clicks);
 
-        ctx.moveTo(0, 0);
+        ctx.moveTo(clicks[clicks.length-2][0], clicks[clicks.length-2][1]);
         ctx.lineTo(x, y);
-        ctx.stroke();
+        
 
+        if(clicks.length > 2) {
+            ctx.moveTo(clicks[clicks.length-3][0], clicks[clicks.length-3][1]);
+            ctx.lineTo(x, y);
+        }
+
+        ctx.stroke();
     }
 }
