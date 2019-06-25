@@ -4,7 +4,7 @@ var ctx = canvas.getContext('2d');
 var pi= Math.PI;
 var k = 2*pi/100;
 var x = 0;
-var max = 85;
+var max = 33;
 var timeout;
 
 draw();
@@ -20,7 +20,16 @@ function draw() {
     ctx.closePath();
     x++;
 
-    if (x <= max ) {
+    ctx.beginPath();
+    ctx.font = 'bold 70px Arial';
+    ctx.fillStyle = 'orange';
+    ctx.textAlign = 'center';
+    ctx.fillText(x+'%', 125, 145);
+    ctx.closePath();
+
+
+
+    if (x < max ) {
         timeout = setTimeout(draw, 100);
     }
     else {
