@@ -6,20 +6,14 @@ window.onload = function() {
 
     canvas.onclick = function(e) {
         e = e || window.event;
-        let x = e.offsetX;
-        let y = e.offsetY;
-        let xy = [x, y];
-        clicks.push(xy);
-        console.log(clicks);
-
-        ctx.moveTo(clicks[clicks.length-2][0], clicks[clicks.length-2][1]);
-        ctx.lineTo(x, y);
+        clicks.push([e.offsetX, e.offsetY]);
         
-
         if(clicks.length > 2) {
             ctx.moveTo(clicks[clicks.length-3][0], clicks[clicks.length-3][1]);
-            ctx.lineTo(x, y);
+            ctx.lineTo(e.offsetX, e.offsetY);
         }
+        ctx.moveTo(clicks[clicks.length-2][0], clicks[clicks.length-2][1]);
+        ctx.lineTo(e.offsetX, e.offsetY);
 
         ctx.stroke();
     }
