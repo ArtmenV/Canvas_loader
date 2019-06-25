@@ -12,10 +12,18 @@ draw();
 function draw() {
     ctx.clearRect(0, 0, 250, 250);
     ctx.beginPath();
-        ctx.arc(125, 125, 100, 0, 3*pi/2, false);
+        ctx.arc(125, 125, 100, 0, x * k, false);
         ctx.strokeStyle = 'orange';
         ctx.lineWidth = 20;
         ctx.lineCap = 'round';
         ctx.stroke();
     ctx.closePath();
+    x++;
+
+    if (x <= max ) {
+        timeout = setTimeout(draw, 100);
+    }
+    else {
+        clearTimeout(timeout);
+    }
 }
