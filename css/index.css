@@ -1,7 +1,39 @@
-#canvas {
-    width: 600px;
-    height: 600px;
+.block {
+    width: 300px;
+    padding: 20px;
     margin: 50px auto;
-    border: 1px solid orange;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px silver;
+    text-align: center;
+}
+.rabbit {
+    width: 200px;
+    min-width: 80%;
     display: block;
+    margin: 10px auto;
+}
+
+.hide {
+    height: 0;
+    overflow: hidden;
+}
+
+.description > img {
+    width: 82px; 
+    height: 100px; 
+    margin: 20px auto;
+    padding: 5px;
+}
+
+.triangle {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    background: url("../img/button.png");
+    background-position: center;
+    background-size: 100%; 
+
 }
